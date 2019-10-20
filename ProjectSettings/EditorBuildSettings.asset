@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PlayScene.unity
     guid: a93a4e906f3ab435c85491419583b04f
+  - enabled: 1
+    path: Assets/HowToPlay_Fixed.unity
+    guid: a4e9bed169a3a4ec1a342153c7eb4a58
+  - enabled: 1
+    path: Assets/TitleScene.unity
+    guid: 18079095d3573417ca6e7689b060b521

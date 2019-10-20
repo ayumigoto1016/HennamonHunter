@@ -24,9 +24,9 @@ public class NetController : MonoBehaviour {
 	void Update()
 	{
 		this.transform.position = new Vector3(Mathf.Clamp(this.transform.position.x, -2, 2),Mathf.Clamp(this.transform.position.y, -5, 5), this.transform.position.z);
-
+		//的の動ける範囲を制限
 		playerControl ();
-
+		//指で操作
 	
 		if (isDoubleTapStart){
 			
@@ -40,13 +40,13 @@ public class NetController : MonoBehaviour {
 
 				
 					if (isCaught) {
-						
-						SceneManager.LoadScene ("ResultSceneWin");
+						StartCoroutine ("WaitAndLoadWin");
+
 						//Hennamonと的が接触してたとき
 
 					} else {
-						
-						SceneManager.LoadScene ("ResultSceneLose");
+
+						StartCoroutine ("WaitAndLoadLose");
 
 					}   //Hennamonと的が接触してなかったとき
 
@@ -87,6 +87,15 @@ public class NetController : MonoBehaviour {
 
 		}
 
+	}
+
+	IEnumerator WaitAndLoadWin(){
+		yield return new WaitForSeconds(1);
+		SceneManager.LoadScene("ResultSceneWin");
+	}
+	IEnumerator WaitAndLoadLose(){
+		yield return new WaitForSeconds(1);
+		SceneManager.LoadScene("ResultSceneLose");
 	}
 
 

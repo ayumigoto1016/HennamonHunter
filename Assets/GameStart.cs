@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour {
 
-	// ボタンをクリックするとBattleSceneに移動します
 	public void ButtonClicked () {
 		SceneManager.LoadScene("PlayScene");
 	}

@@ -7,6 +7,6 @@ using UnityEngine.SceneManagement;
 public class HowToPlay : MonoBehaviour {
 
 	public void ButtonClicked () {
-		SceneManager.LoadScene("HowToPlay");
+		SceneManager.LoadScene("HowToPlay_Fixed");
 	}
 }
